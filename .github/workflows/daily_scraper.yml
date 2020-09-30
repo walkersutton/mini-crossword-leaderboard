@@ -4,7 +4,9 @@ on:
     - cron: '59 1 * * 2-6'
     - cron: '59 21 * * 6'
     - cron: '59 21 * * SUN'
-      
+  push:
+    branches:
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
