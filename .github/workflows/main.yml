@@ -1,5 +1,4 @@
 name: scrape_daily_solve_times
-
 on:
   schedule:
     - cron: '59 1 * * 2-6'
@@ -7,14 +6,12 @@ on:
     - cron: '59 21 * * SUN'
       
 jobs:
-
   build:
     runs-on: ubuntu-latest
-    
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Code
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         
       - name: Setup Python Environment
         uses: actions/setup-python@v2
