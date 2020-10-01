@@ -1,15 +1,16 @@
+import os
 import time
 from datetime import date
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-"""
-USERNAME = "secret"
-PASSWORD = "secret"
-GOOGLE_SHEETS_API_KEY = "secret"
-GOOGLE_SHEETS_API_CONFIG = {}
-"""
+
+USERNAME = os.environ.get('USERNAME')
+PASSWORD = os.environ.get('PASSWORD')
+GOOGLE_SHEETS_API_KEY = os.environ.get('GOOGLE_SHEETS_API_KEY')
+GOOGLE_SHEETS_API_CONFIG = os.environ.get('GOOGLE_SHEETS_API_CONFIG')
+
 
 def formatStats(driver):
     playerStats = {}
