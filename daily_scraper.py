@@ -4,11 +4,12 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-
+"""
 USERNAME = "secret"
 PASSWORD = "secret"
 GOOGLE_SHEETS_API_KEY = "secret"
 GOOGLE_SHEETS_API_CONFIG = {}
+"""
 
 def formatStats(driver):
     playerStats = {}
